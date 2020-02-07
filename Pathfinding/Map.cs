@@ -11,13 +11,12 @@ namespace Pathfinding
         public Map()
         {
             mapGrid = new int[50, 25];
-            GenerateObstacles();
             DrawMap();
         }
 
-        void GenerateObstacles()
+        public void GenerateObstacles(int amount)
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < amount; i++)
             {
                 Random rand = new Random();
                 mapGrid[rand.Next(1, 50), rand.Next(1, 25)] = 3;
